@@ -1,0 +1,67 @@
+(1)
+previousElementSibling:该元素之前的第一个同级元素
+nextElementSibling:在该元素后的第一个同级元素
+tabindex:指定tab键跳转的顺序，有数值123456...
+onselectstart:当前目标被选定时触发
+(2)
+$("#svg_area").mousemove(); 实现鼠标移动，解除鼠标拖拽绑定
+(3)
+js中try catch即使在try中return，finally语句依然会执行，但是执行顺序在return之后
+finally中的return会覆盖掉之前的return
+(4)
+判断NaN更可靠的方法是，利用NaN是JavaScript之中唯一不等于自身的值这个特点，进行判断。
+function myIsNaN(value) {
+  return value !== value;
+}
+(5)
+输入要考虑屏蔽汉字和汉字符号
+(6)
+IE 下 onMouseDown 事件有个 event.button 可以返回一个数值，根据数值判断取得用户按了那个鼠标键 event.button==0 默认。没有按任何按钮。
+event.button==1 鼠标左键
+event.button==2 鼠标右键
+event.button==3 鼠标左右键同时按下
+event.button==4 鼠标中键
+event.button==5 鼠标左键和中键同时按下
+event.button==6 鼠标右键和中键同时按下
+event.button==7 所有三个键都按下
+event要是这个在运行时报错的话就用这个window.event
+(7)
+将数组清空的一个有效方法，就是将length属性设为0。
+var arr = [ 'a', 'b', 'c' ];
+arr.length = 0;
+arr // []
+(8)
+函数内部定义的变量，会在该作用域内覆盖同名全局变量。
+var v = 1;
+function f(){
+  var v = 2;
+  console.log(v);
+}
+f() // 2
+v // 1
+上面代码中，变量v同时在函数的外部和内部有定义。结果，在函数内部定义，局部变量v覆盖了全局变量v。
+(9)
+某些情况下，如果需要对某个原始类型的变量，获取传址传递的效果，可以将它写成全局对象的属性。
+var a = 1;
+function f(p) {
+  window[p] = 2;
+}
+f('a');
+a // 2
+上面代码中，变量a本来是传值传递，但是写成window对象的属性，就达到了传址传递的效果。
+(10)
+JavaScript引擎内部，eval实际上是一个引用，默认调用一个内部方法。这使得eval的使用分成两种情况，一种是像上面这样的调用eval(expression)，这叫做“直接使用”，这种情况下eval的作用域就是当前作用域。除此之外的调用
+
+方法，都叫“间接调用”，此时eval的作用域总是全局作用域
+(11)
+FF下keypress函数会和tab键有冲突
+(12)
+var regex = /b/g;
+var str = 'abba';
+regex.test(str); // true
+regex.test(str); // true
+regex.test(str); // false
+上面代码中，正则模式含有g修饰符，每次都是从上一次匹配成功处，开始向后匹配。因为字符串“abba”只有两个“b”，所以前两次匹配结果为true，第三次匹配结果为false。
+(13)
+当使用var命令声明变量时，变量的configurable为false。而不使用var命令声明变量时（或者使用属性赋值的方式声明变量），变量的可配置性为true。
+(14)
