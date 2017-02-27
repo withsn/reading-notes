@@ -83,3 +83,5 @@ hello.m() // Hello
 (15)
 javascript不能和java一样直接依靠改变参数的个数来实现重载，默认情况下会调用参数最多的构造方法
 如果要实现重载的话，可以在构造函数内部，通过判断arguments.length判断参数个数，然后调用对应的构造函数内容
+(16)
+修改checkbox选中状态.attr("checked" , false);.attr("checked" , true)
