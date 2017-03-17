@@ -85,3 +85,5 @@ javascript不能和java一样直接依靠改变参数的个数来实现重载，
 如果要实现重载的话，可以在构造函数内部，通过判断arguments.length判断参数个数，然后调用对应的构造函数内容
 (16)
 boolean型属性使用.prop(attribute , value)修改属性
+(17)
+SQLException.getSQLState 获取JDBC返回的错误码
