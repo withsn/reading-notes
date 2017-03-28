@@ -1,3 +1,3 @@
 # reading-notes
-taohua,yingcao,yunv,zuofutongzi,niao
-laotou,jiaotu,yinghua,deng,bailang
+taohua,yutou,bailang,deng,zuofu
+laotou,jiaotu,niao,yingcao,zuofu
